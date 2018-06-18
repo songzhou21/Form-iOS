@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5800337420D7D55500C013DF /* README in Resources */ = {isa = PBXBuildFile; fileRef = 5800337320D7D55500C013DF /* README */; };
 		588792E020D7D4C40010A247 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 588792DF20D7D4C40010A247 /* AppDelegate.m */; };
 		588792E320D7D4C40010A247 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 588792E220D7D4C40010A247 /* ViewController.m */; };
 		588792E620D7D4C40010A247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588792E420D7D4C40010A247 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5800337320D7D55500C013DF /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		588792DB20D7D4C40010A247 /* Form-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Form-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		588792DE20D7D4C40010A247 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		588792DF20D7D4C40010A247 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				588792DD20D7D4C40010A247 /* Form-iOS */,
 				588792F620D7D4C50010A247 /* Form-iOSTests */,
 				588792DC20D7D4C40010A247 /* Products */,
+				5800337320D7D55500C013DF /* README */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5800337420D7D55500C013DF /* README in Resources */,
 				588792EB20D7D4C50010A247 /* LaunchScreen.storyboard in Resources */,
 				588792E820D7D4C50010A247 /* Assets.xcassets in Resources */,
 				588792E620D7D4C40010A247 /* Main.storyboard in Resources */,
