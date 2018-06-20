@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<SZFormRowViewDelegate> rowDelegate;
 @property (nonatomic, copy) NSString *key;
+- (void)setText:(NSString *)text forKey:(NSString *)key;
 
 @end
 

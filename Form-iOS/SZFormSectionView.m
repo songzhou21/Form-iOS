@@ -8,6 +8,7 @@
 
 #import "SZFormSectionView.h"
 #import "SZFormRowTextField.h"
+#import "SZFormRowDatePicker.h"
 
 @interface SZFormSectionView ()
 
@@ -63,7 +64,10 @@
     __rowViews__ = [NSMutableArray array];
     NSArray<NSDictionary *> *rows = json[@"rows"];
     [rows enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj[@"type"] isEqualToString:@"text-field"]) {
+        NSString *type = obj[@"type"];
+        NSString *key = obj[@"key"];
+        
+        if ([type isEqualToString:@"text-field"]) {
             SZFormRowTextField *view = [SZFormRowTextField new];
             view.key = obj[@"key"];
             view.backgroundColor = [UIColor whiteColor];
@@ -71,7 +75,16 @@
             [self.contentView addArrangedSubview:view];
             [self -> __rowViews__ addObject:view];
             
-            view.titleLabel.text = obj[@"key"];
+            view.titleLabel.text = key;
+        } else if ([type isEqualToString:@"date-picker"]) {
+            SZFormRowDatePicker *datePicker = [SZFormRowDatePicker new];
+            datePicker.key = key;
+
+            [self.contentView addArrangedSubview:datePicker];
+            [self -> __rowViews__ addObject:datePicker];
+            
+            datePicker.titleLabel.text = key;
+            
         } else {
             SZFormRowView *rowView = [SZFormRowView new];
             rowView.backgroundColor = [UIColor whiteColor];

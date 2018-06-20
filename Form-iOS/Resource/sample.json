@@ -25,7 +25,7 @@
                           },
                           {
                           "type": "date-picker",
-                          "key": "birthday"
+                          "key": "birthday2"
                           }
                           ]
                  }

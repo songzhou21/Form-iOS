@@ -59,4 +59,8 @@
         [self.rowDelegate formRowView:self didEndEditingWithText:sender.text key:self.key];
     }
 }
+
+- (void)setText:(NSString *)text forKey:(NSString *)key {
+    self.textField.text = text;
+}
 @end

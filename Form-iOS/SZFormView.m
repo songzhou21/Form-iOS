@@ -85,6 +85,8 @@
 
 #pragma mark - SZFormRowViewDelegate
 - (void)formRowView:(id<SZFormRowViewProtocol>)view didEndEditingWithText:(NSString *)text key:(nonnull NSString *)key{
+    [view setText:text forKey:key];
+    
     if ([self.formDelegate respondsToSelector:@selector(formView:key:value:)]) {
         [self.formDelegate formView:self key:key value:text];
     }

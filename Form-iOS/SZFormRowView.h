@@ -26,13 +26,20 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<SZFormRowViewDelegate> rowDelegate;
 @property (nonatomic, copy) NSString *key;
 
+- (void)setText:(NSString *)text forKey:(NSString *)key;
+
 @end
 
 @interface SZFormRowView : UIView <SZFormRowViewProtocol>
 
 @property (nonatomic) UILabel *titleLabel;
+@property (nonatomic) UILabel *contentLabel;
+
 @property (nonatomic, weak) id<SZFormRowViewDelegate> rowDelegate;
 @property (nonatomic, copy) NSString *key;
+- (void)setText:(NSString *)text forKey:(NSString *)key;
+
+@property (nonatomic) UITapGestureRecognizer *gestureRecognizer;
 
 @end
 
