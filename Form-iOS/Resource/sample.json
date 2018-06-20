@@ -1,0 +1,33 @@
+{
+    "sections": [
+                 {
+                 "key": "section1",
+                 "title": "section_one",
+                 "rows": [
+                          {
+                          "type": "text-field",
+                          "key": "first_name",
+                          "title": "first name"
+                          },
+                          {
+                          "type": "date-picker",
+                          "key": "birthday"
+                          }
+                          ]
+                 },
+                 {
+                 "key": "section2",
+                 "rows": [
+                          {
+                          "type": "text-field",
+                          "key": "first_name",
+                          "title": "first name"
+                          },
+                          {
+                          "type": "date-picker",
+                          "key": "birthday"
+                          }
+                          ]
+                 }
+                 ]
+}

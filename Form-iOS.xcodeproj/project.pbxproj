@@ -15,6 +15,12 @@
 		588792EE20D7D4C50010A247 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 588792ED20D7D4C50010A247 /* main.m */; };
 		588792F820D7D4C50010A247 /* Form_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 588792F720D7D4C50010A247 /* Form_iOSTests.m */; };
 		589518C120D7D61200A4EA8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589518C020D7D61200A4EA8F /* Assets.xcassets */; };
+		589518CB20D7D6D500A4EA8F /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 589518CA20D7D6D500A4EA8F /* sample.json */; };
+		589518CE20D7D85100A4EA8F /* SZForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 589518CD20D7D85100A4EA8F /* SZForm.m */; };
+		589518D120D7E12700A4EA8F /* SZFormRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589518D020D7E12700A4EA8F /* SZFormRowView.m */; };
+		589518D420D7E14D00A4EA8F /* SZFormRowTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 589518D320D7E14D00A4EA8F /* SZFormRowTextField.m */; };
+		589518D720D7E35300A4EA8F /* SZFormSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589518D620D7E35300A4EA8F /* SZFormSectionView.m */; };
+		589518DA20D7E41E00A4EA8F /* SZFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589518D920D7E41E00A4EA8F /* SZFormView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,17 @@
 		588792F720D7D4C50010A247 /* Form_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Form_iOSTests.m; sourceTree = "<group>"; };
 		588792F920D7D4C50010A247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589518C020D7D61200A4EA8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		589518CA20D7D6D500A4EA8F /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		589518CC20D7D85100A4EA8F /* SZForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZForm.h; sourceTree = "<group>"; };
+		589518CD20D7D85100A4EA8F /* SZForm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZForm.m; sourceTree = "<group>"; };
+		589518CF20D7E12700A4EA8F /* SZFormRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZFormRowView.h; sourceTree = "<group>"; };
+		589518D020D7E12700A4EA8F /* SZFormRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZFormRowView.m; sourceTree = "<group>"; };
+		589518D220D7E14D00A4EA8F /* SZFormRowTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZFormRowTextField.h; sourceTree = "<group>"; };
+		589518D320D7E14D00A4EA8F /* SZFormRowTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZFormRowTextField.m; sourceTree = "<group>"; };
+		589518D520D7E35300A4EA8F /* SZFormSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZFormSectionView.h; sourceTree = "<group>"; };
+		589518D620D7E35300A4EA8F /* SZFormSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZFormSectionView.m; sourceTree = "<group>"; };
+		589518D820D7E41E00A4EA8F /* SZFormView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZFormView.h; sourceTree = "<group>"; };
+		589518D920D7E41E00A4EA8F /* SZFormView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZFormView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +82,10 @@
 		5800337520D7D5F500C013DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				588792DE20D7D4C40010A247 /* AppDelegate.h */,
+				588792DF20D7D4C40010A247 /* AppDelegate.m */,
+				588792E120D7D4C40010A247 /* ViewController.h */,
+				588792E220D7D4C40010A247 /* ViewController.m */,
 				588792E420D7D4C40010A247 /* Main.storyboard */,
 				588792E920D7D4C50010A247 /* LaunchScreen.storyboard */,
 				588792EC20D7D4C50010A247 /* Info.plist */,
@@ -96,10 +117,17 @@
 		588792DD20D7D4C40010A247 /* Form-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				588792DE20D7D4C40010A247 /* AppDelegate.h */,
-				588792DF20D7D4C40010A247 /* AppDelegate.m */,
-				588792E120D7D4C40010A247 /* ViewController.h */,
-				588792E220D7D4C40010A247 /* ViewController.m */,
+				589518CC20D7D85100A4EA8F /* SZForm.h */,
+				589518CD20D7D85100A4EA8F /* SZForm.m */,
+				589518D820D7E41E00A4EA8F /* SZFormView.h */,
+				589518D920D7E41E00A4EA8F /* SZFormView.m */,
+				589518D520D7E35300A4EA8F /* SZFormSectionView.h */,
+				589518D620D7E35300A4EA8F /* SZFormSectionView.m */,
+				589518CF20D7E12700A4EA8F /* SZFormRowView.h */,
+				589518D020D7E12700A4EA8F /* SZFormRowView.m */,
+				589518D220D7E14D00A4EA8F /* SZFormRowTextField.h */,
+				589518D320D7E14D00A4EA8F /* SZFormRowTextField.m */,
+				589518C920D7D6BB00A4EA8F /* Resource */,
 				5800337520D7D5F500C013DF /* Supporting Files */,
 			);
 			path = "Form-iOS";
@@ -112,6 +140,14 @@
 				588792F920D7D4C50010A247 /* Info.plist */,
 			);
 			path = "Form-iOSTests";
+			sourceTree = "<group>";
+		};
+		589518C920D7D6BB00A4EA8F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				589518CA20D7D6D500A4EA8F /* sample.json */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589518CB20D7D6D500A4EA8F /* sample.json in Resources */,
 				5800337420D7D55500C013DF /* README in Resources */,
 				588792EB20D7D4C50010A247 /* LaunchScreen.storyboard in Resources */,
 				589518C120D7D61200A4EA8F /* Assets.xcassets in Resources */,
@@ -215,7 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589518D120D7E12700A4EA8F /* SZFormRowView.m in Sources */,
+				589518CE20D7D85100A4EA8F /* SZForm.m in Sources */,
 				588792E320D7D4C40010A247 /* ViewController.m in Sources */,
+				589518DA20D7E41E00A4EA8F /* SZFormView.m in Sources */,
+				589518D420D7E14D00A4EA8F /* SZFormRowTextField.m in Sources */,
+				589518D720D7E35300A4EA8F /* SZFormSectionView.m in Sources */,
 				588792EE20D7D4C50010A247 /* main.m in Sources */,
 				588792E020D7D4C40010A247 /* AppDelegate.m in Sources */,
 			);
