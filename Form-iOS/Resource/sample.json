@@ -1,33 +1,35 @@
 {
     "sections": [
-                 {
-                 "key": "section1",
-                 "title": "section_one",
-                 "rows": [
-                          {
-                          "type": "text-field",
-                          "key": "first_name",
-                          "title": "first name"
-                          },
-                          {
-                          "type": "date-picker",
-                          "key": "birthday"
-                          }
-                          ]
-                 },
-                 {
-                 "key": "section2",
-                 "rows": [
-                          {
-                          "type": "text-field",
-                          "key": "last_name",
-                          "title": "last name"
-                          },
-                          {
-                          "type": "date-picker",
-                          "key": "birthday2"
-                          }
-                          ]
-                 }
-                 ]
+        {
+            "key": "section1",
+            "title": "section_one",
+            "rows": [
+                {
+                    "type": "text-field",
+                    "key": "first_name",
+                    "title": "first name",
+                    "required": true
+                },
+                {
+                    "type": "date-picker",
+                    "key": "birthday",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "key": "section2",
+            "rows": [
+                {
+                    "type": "text-field",
+                    "key": "last_name",
+                    "title": "last name"
+                },
+                {
+                    "type": "date-picker",
+                    "key": "birthday2"
+                }
+            ]
+        }
+    ]
 }
