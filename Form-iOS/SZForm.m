@@ -7,12 +7,13 @@
 //
 
 #import "SZForm.h"
-#import "SZFormView.h"
 
-
-@interface SZForm ()
+@interface SZForm () <SZFormViewDelegate>
 
 @property (nonatomic) NSDictionary *json;
+@property (nonatomic) NSMutableDictionary *requiredParameters;
+@property (nonatomic) SZFormView *formView;
+
 
 @end
 
@@ -28,19 +29,29 @@
             return nil;
         }
         
+        _requiredParameters = [NSMutableDictionary dictionary];
     }
     return self;
 }
 
 #pragma mark - private
-- (UIView *)form {
-    return [SZFormView formFromJSON:_json];
-}
-
-+ (UIView *)formFromJSON:(NSString *)fileName {
-    SZForm *form = [[SZForm alloc] initWithJSON:fileName];
+- (SZFormView *)formView {
+    SZFormView *view = [SZFormView formFromJSON:_json];
+    view.formDelegate = self;
     
-    return [form form];
+    return view;
 }
 
++ (instancetype)formFromJSON:(NSString *)fileName {
+    return [[SZForm alloc] initWithJSON:fileName];
+}
+
+#pragma mark - getter
+- (NSDictionary *)parameters {
+    return [_requiredParameters copy];
+}
+#pragma mark - SZFormViewDelegate
+- (void)formView:(SZFormView *)formView key:(NSString *)key value:(NSString *)value {
+    _requiredParameters[key]= value;
+}
 @end

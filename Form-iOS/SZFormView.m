@@ -9,7 +9,7 @@
 #import "SZFormView.h"
 #import "SZFormSectionView.h"
 
-@interface SZFormView ()
+@interface SZFormView () <SZFormRowViewDelegate>
 
 @property (nonatomic) NSDictionary *json;
 
@@ -71,9 +71,22 @@
     [_sectionViews enumerateObjectsUsingBlock:^(SZFormSectionView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.stackView addArrangedSubview:obj];
     }];
+    
+    [_sectionViews enumerateObjectsUsingBlock:^(SZFormSectionView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj.rows enumerateObjectsUsingBlock:^(SZFormRowView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            obj.rowDelegate = self;
+        }];
+    }];
 }
 
-+ (UIView *)formFromJSON:(NSDictionary *)json {
++ (SZFormView *)formFromJSON:(NSDictionary *)json {
     return [[SZFormView alloc] initWithJSON:json];
+}
+
+#pragma mark - SZFormRowViewDelegate
+- (void)formRowView:(id<SZFormRowViewProtocol>)view didEndEditingWithText:(NSString *)text key:(nonnull NSString *)key{
+    if ([self.formDelegate respondsToSelector:@selector(formView:key:value:)]) {
+        [self.formDelegate formView:self key:key value:text];
+    }
 }
 @end

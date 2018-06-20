@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SZFormView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SZForm : NSObject
 
-+ (UIView *)formFromJSON:(NSString *)fileName;
++ (instancetype)formFromJSON:(NSString *)fileName;
 
+@property (nonatomic, readonly) NSDictionary *parameters;
+
+- (SZFormView *)formView;
+    
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SZFormRowView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SZFormRowTextField : UIView
+@interface SZFormRowTextField : UIView <SZFormRowViewProtocol>
 
 @property (nonatomic) UILabel *titleLabel;
 @property (nonatomic) UITextField *textField;
+
+@property (nonatomic, weak) id<SZFormRowViewDelegate> rowDelegate;
+@property (nonatomic, copy) NSString *key;
 
 @end
 

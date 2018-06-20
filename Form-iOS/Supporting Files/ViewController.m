@@ -11,6 +11,10 @@
 
 @interface ViewController ()
 
+@property (nonatomic) SZForm *form;
+
+@property (nonatomic) UIButton *confirmButton;
+
 @end
 
 @implementation ViewController
@@ -18,16 +22,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView *form = [SZForm formFromJSON:@"sample"];
-    [self.view addSubview:form];
+    _form = [SZForm formFromJSON:@"sample"];
+    SZFormView *formView = [_form formView];
+    [self.view addSubview:formView];
+    
+    _confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_confirmButton setTitle:@"confirm" forState:UIControlStateNormal];
+    [self.view addSubview:_confirmButton];
 
-    form.translatesAutoresizingMaskIntoConstraints = NO;
+    // layout
+    formView.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint activateConstraints:@[
-                                              [form.leftAnchor constraintEqualToAnchor:self.view.leftAnchor],
-                                              [form.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
-                                              [form.rightAnchor constraintEqualToAnchor:self.view.rightAnchor],
-                                              [form.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor],
+                                              [formView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor],
+                                              [formView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
+                                              [formView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor],
+                                              [formView.bottomAnchor constraintEqualToAnchor:self.confirmButton.topAnchor],
                                               ]];
+
+    
+    _confirmButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+                                              [_confirmButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+                                              [_confirmButton.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor],
+                                              [_confirmButton.heightAnchor constraintEqualToConstant:44]
+                                              ]];
+    
+    [_confirmButton addTarget:self action:@selector(tapOnConfrim) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
@@ -36,5 +56,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)tapOnConfrim {
+    NSLog(@"%@", self.form.parameters);
+}
 
 @end

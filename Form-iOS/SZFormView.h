@@ -10,9 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class SZFormView;
+@protocol SZFormViewDelegate <NSObject>
+
+@optional
+- (void)formView:(SZFormView *)formView key:(NSString *)key value:(NSString *)value;
+
+@end
+
 @interface SZFormView : UIScrollView
 
-+ (UIScrollView *)formFromJSON:(NSDictionary *)json;
++ (SZFormView *)formFromJSON:(NSDictionary *)json;
+
+@property (nonatomic, weak) id<SZFormViewDelegate> formDelegate;
 
 @end
 

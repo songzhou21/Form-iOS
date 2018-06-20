@@ -10,9 +10,29 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SZFormRowView : UIView
+@class SZFormRowView;
+@protocol SZFormRowViewProtocol;
+
+@protocol SZFormRowViewDelegate <NSObject>
+
+@optional
+- (void)formRowView:(id<SZFormRowViewProtocol>)view didEndEditingWithText:(NSString *)text key:(NSString *)key;
+
+@end
+
+@protocol SZFormRowViewProtocol <NSObject>
+
+@required
+@property (nonatomic, weak) id<SZFormRowViewDelegate> rowDelegate;
+@property (nonatomic, copy) NSString *key;
+
+@end
+
+@interface SZFormRowView : UIView <SZFormRowViewProtocol>
 
 @property (nonatomic) UILabel *titleLabel;
+@property (nonatomic, weak) id<SZFormRowViewDelegate> rowDelegate;
+@property (nonatomic, copy) NSString *key;
 
 @end
 

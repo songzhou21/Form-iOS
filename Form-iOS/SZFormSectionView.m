@@ -7,6 +7,7 @@
 //
 
 #import "SZFormSectionView.h"
+#import "SZFormRowTextField.h"
 
 @interface SZFormSectionView ()
 
@@ -16,7 +17,7 @@
 @end
 
 @implementation SZFormSectionView {
-    NSMutableArray<SZFormRowView *> *__rowViews__;
+    NSMutableArray<id<SZFormRowViewProtocol>> *__rowViews__;
 }
 
 - (instancetype)initWithJSON:(NSDictionary *)json {
@@ -62,13 +63,27 @@
     __rowViews__ = [NSMutableArray array];
     NSArray<NSDictionary *> *rows = json[@"rows"];
     [rows enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        SZFormRowView *rowView = [SZFormRowView new];
-        rowView.backgroundColor = [UIColor whiteColor];
+        if ([obj[@"type"] isEqualToString:@"text-field"]) {
+            SZFormRowTextField *view = [SZFormRowTextField new];
+            view.key = obj[@"key"];
+            view.backgroundColor = [UIColor whiteColor];
+            
+            [self.contentView addArrangedSubview:view];
+            [self -> __rowViews__ addObject:view];
+            
+            view.titleLabel.text = obj[@"key"];
+        } else {
+            SZFormRowView *rowView = [SZFormRowView new];
+            rowView.backgroundColor = [UIColor whiteColor];
+            
+            [self.contentView addArrangedSubview:rowView];
+            [self -> __rowViews__ addObject:rowView];
+            
+            rowView.titleLabel.text = obj[@"key"];
+        }
         
-        [self.contentView addArrangedSubview:rowView];
-        [self -> __rowViews__ addObject:rowView];
         
-        rowView.titleLabel.text = obj[@"key"];
+      
     }];
     
     return self;
