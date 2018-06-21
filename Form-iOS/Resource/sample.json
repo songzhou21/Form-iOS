@@ -8,7 +8,8 @@
                     "type": "text-field",
                     "key": "first_name",
                     "title": "first name",
-                    "required": true
+                    "rule": "[6,]",
+                    "reason": "the length of first name must greater than 6"
                 },
                 {
                     "type": "date-picker",

@@ -58,7 +58,12 @@
 
 - (void)tapOnConfrim {
     BOOL valid = [_form validParameters];
-    NSLog(@"%@, %d", self.form.parameters, valid);
+    if (valid) {
+        NSLog(@"%@", self.form.parameters);
+    } else {
+        NSLog(@"%@, reason:%@", self.form.parameters, [self.form firstNotValidReason]);
+    }
+
 }
 
 @end

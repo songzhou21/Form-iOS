@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SZFormView.h"
+#import "SZFormItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,10 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)formFromJSON:(NSString *)fileName;
 
-@property (nonatomic, readonly) NSDictionary *parameters;
+@property (nonatomic, readonly) NSDictionary<NSString *, SZFormItem *> *parameters;
 
 - (SZFormView *)formView;
 - (BOOL)validParameters;
+
+- (NSString * _Nullable)firstNotValidReason;
 
 @end
 

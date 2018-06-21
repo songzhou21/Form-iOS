@@ -23,6 +23,7 @@
 		589518DA20D7E41E00A4EA8F /* SZFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589518D920D7E41E00A4EA8F /* SZFormView.m */; };
 		58D7477D20DA271E0035B6F8 /* SZFormRowDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D7477C20DA271E0035B6F8 /* SZFormRowDatePicker.m */; };
 		58D7478020DA2D9E0035B6F8 /* SZForminputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D7477F20DA2D9E0035B6F8 /* SZForminputAccessoryView.m */; };
+		58D7478320DA43270035B6F8 /* SZFormItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D7478220DA43270035B6F8 /* SZFormItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		58D7477C20DA271E0035B6F8 /* SZFormRowDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZFormRowDatePicker.m; sourceTree = "<group>"; };
 		58D7477E20DA2D9E0035B6F8 /* SZForminputAccessoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZForminputAccessoryView.h; sourceTree = "<group>"; };
 		58D7477F20DA2D9E0035B6F8 /* SZForminputAccessoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZForminputAccessoryView.m; sourceTree = "<group>"; };
+		58D7478120DA43270035B6F8 /* SZFormItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZFormItem.h; sourceTree = "<group>"; };
+		58D7478220DA43270035B6F8 /* SZFormItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZFormItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				58D7477C20DA271E0035B6F8 /* SZFormRowDatePicker.m */,
 				58D7477E20DA2D9E0035B6F8 /* SZForminputAccessoryView.h */,
 				58D7477F20DA2D9E0035B6F8 /* SZForminputAccessoryView.m */,
+				58D7478120DA43270035B6F8 /* SZFormItem.h */,
+				58D7478220DA43270035B6F8 /* SZFormItem.m */,
 				589518C920D7D6BB00A4EA8F /* Resource */,
 				5800337520D7D5F500C013DF /* Supporting Files */,
 			);
@@ -265,6 +270,7 @@
 				589518D120D7E12700A4EA8F /* SZFormRowView.m in Sources */,
 				58D7478020DA2D9E0035B6F8 /* SZForminputAccessoryView.m in Sources */,
 				589518CE20D7D85100A4EA8F /* SZForm.m in Sources */,
+				58D7478320DA43270035B6F8 /* SZFormItem.m in Sources */,
 				588792E320D7D4C40010A247 /* ViewController.m in Sources */,
 				58D7477D20DA271E0035B6F8 /* SZFormRowDatePicker.m in Sources */,
 				589518DA20D7E41E00A4EA8F /* SZFormView.m in Sources */,
