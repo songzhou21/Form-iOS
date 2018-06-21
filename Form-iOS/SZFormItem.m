@@ -46,9 +46,24 @@
 
 #pragma mark - API
 - (BOOL)valid {
-    if (self.value.length > 0) {
-        return YES;
+    if (self.rule) {
+        NSString *r = [self.rule substringWithRange:NSMakeRange(1, self.rule.length - 2)];
+        NSArray<NSString *> *lengths = [r componentsSeparatedByString:@","];
+        
+        NSUInteger min = [lengths.firstObject integerValue];
+        NSUInteger max = [lengths.lastObject isEqualToString:@""] ? INT_MAX : [lengths.lastObject integerValue];
+        
+        if ([self.value length] > min && [self.value length] < max) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else {
+        if (self.value.length > 0) {
+            return YES;
+        }
     }
+
     
     return NO;
 }

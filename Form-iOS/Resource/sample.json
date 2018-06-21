@@ -24,7 +24,9 @@
                 {
                     "type": "text-field",
                     "key": "last_name",
-                    "title": "last name"
+                    "title": "last name",
+                    "rule": "[6,9]",
+                    "reason": "the length of last name must greater than 6, less than 9"
                 },
                 {
                     "type": "date-picker",
